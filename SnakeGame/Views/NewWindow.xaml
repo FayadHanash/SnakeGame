@@ -1,0 +1,26 @@
+﻿<Window x:Class="SnakeGame.Views.NewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SnakeGame.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner"
+        Background="{StaticResource MainBackgroundColor}"
+        Title="NewWindow" Height="100" Width="350">
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Button Content="One player" Command="{Binding OnePlayerCommand}"/>
+            <Button Content="Two players" Command="{Binding TwoPlayersCommand}"/>
+            <Button Content="Three players" Command="{Binding ThreePlayersCommand}"/>
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="5"/>
+                    <Setter Property="Width" Value="100"/>
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+            </StackPanel.Resources>
+
+        </StackPanel>
+    </Grid>
+</Window>
