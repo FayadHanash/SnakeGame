@@ -229,11 +229,8 @@ public class Engine
                 {
                     if (player.IsEat(food))
                     {
-                        food.GenerateNewFood(new Position(random.Next(20, (int)Width - 40), random.Next(20, (int)Height - 40)));
-                        
                         if (food.FoodType == FoodTypes.Speed)
                         {
-
                             OnSpeed(100);
                             timer.Start();
                         }
@@ -242,6 +239,8 @@ public class Engine
                             OnSpeed(500);
                             timer.Start();
                         }
+                        
+                        food.GenerateNewFood(new Position(random.Next(20, (int)Width - 40), random.Next(20, (int)Height - 40)));
                     }
                 }
             }
